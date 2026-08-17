@@ -1,1 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLCA Practice Portal</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f6;
+      color: #222;
+    }
+
+    header {
+      background: #0b3d2e;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .welcome {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+
+    .welcome h2 {
+      color: #0b3d2e;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      color: #0b3d2e;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    button {
+      border: none;
+      background: #0b3d2e;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #145c46;
+    }
+
+    .section {
+      display: none;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      color: #0b3d2e;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      border-bottom: 1px solid #ddd;
+      padding: 18px 0;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .option {
+      display: block;
+      background: #f4f7f6;
+      padding: 10px;
+      margin: 7px 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      background: #e2eee9;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #0b3d2e;
+    }
+
+    .back {
+      margin-top: 20px;
+      background: #555;
+    }
+
+    footer {
+      background: #0b3d2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Pak Legal Career Academy</h1>
+  <p>PLCA Practice Portal</p>
+</header>
+
+<div class="container">
+
+  <div class="welcome" id="home">
+    <h2>Welcome to PLCA Practice Portal</h2>
+    <p>Prepare for LAT and Law-GAT with online MCQ practice.</p>
+
+    <div class="buttons">
+
+      <div class="card">
+        <h3>LAT Practice</h3>
+        <p>Practice important LAT MCQs.</p>
+        <button onclick="showSection('lat')">Start LAT</button>
+      </div>
+
+      <div class="card">
+        <h3>Law-GAT Practice</h3>
+        <p>Practice important Law-GAT MCQs.</p>
+        <button onclick="showSection('gat')">Start Law-GAT</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LAT SECTION -->
+
+  <div class="section" id="lat">
+
+    <h2>LAT MCQ Practice</h2>
+
+    <div class="question">
+      <p>Q1. The capital of Pakistan is:</p>
+
+      <label class="option">
+        <input type="radio" name="lat1" value="A"> A. Lahore
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat1" value="B"> B. Karachi
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat1" value="C"> C. Islamabad
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat1" value="D"> D. Peshawar
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Q2. "Havoc" means:</p>
+
+      <label class="option">
+        <input type="radio" name="lat2" value="A"> A. Peace
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat2" value="B"> B. Chaos
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat2" value="C"> C. Happiness
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat2" value="D"> D. Order
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Q3. The national language of Pakistan is:</p>
+
+      <label class="option">
+        <input type="radio" name="lat3" value="A"> A. Punjabi
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat3" value="B"> B. Sindhi
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat3" value="C"> C. Urdu
+      </label>
+
+      <label class="option">
+        <input type="radio" name="lat3" value="D"> D. Pashto
+      </label>
+    </div>
+
+    <button onclick="checkLAT()">Submit LAT Test</button>
+
+    <div class="result" id="latResult"></div>
+
+    <br>
+
+    <button class="back" onclick="goHome()">Back to Home</button>
+
+  </div>
+
+  <!-- LAW GAT SECTION -->
+
+  <div class="section" id="gat">
+
+    <h2>Law-GAT MCQ Practice</h2>
+
+    <div class="question">
+      <p>Q1. The Constitution of Pakistan currently in force was enacted in:</p>
+
+      <label class="option">
+        <input type="radio" name="gat1" value="A"> A. 1956
+      </label>
+
+      <label class="option">
+        <input type="radio" name="gat1" value="B"> B. 1962
+      </label>
+
+      <label class="option">
+        <input type="radio" name="gat1" value="C"> C. 1973
+      </label>
+
+      <label class="option">
+        <input type="radio" name="gat1" value="D"> D. 1985
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Q2. The Supreme Law of Pakistan is:</p>
+
+      <label class="option">
+        <input type="radio" name="gat2" value="A"> A. Pakistan Penal Code
+      </label>
+
+      <label class="option">
+        <input type="radio" name="gat2" value="B"> B. Constitution
+      </label>
+
+      <label class="option">
+        <input type="radio" name="gat2" value="C"> C. Contract Act
+      </label>
+
+      <label class="option">
+        <input type="radio" name="gat2" value="D"> D. Civil Procedure Code
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Q3. A
